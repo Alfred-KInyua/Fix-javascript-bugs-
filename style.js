@@ -10,7 +10,7 @@ hamburger.addEventListener('click', () => {
   logo.classList.toggle('active');
 });
 
-document.querySelectorAll('.menu').forEach((link) => {
+document.querySelectorAll('menu').forEach((link) => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('active');
     menu.classList.remove('active');
@@ -25,7 +25,7 @@ const displayError = document.querySelector('#feedback');
 const form = document.querySelector('form');
 
 
-function showError() {
+function showsError() {
   displayError.innerHTML = '<strong>The email must be lowercase!</strong>';
   displayError.style.color = "#ff0000";
 }
@@ -60,10 +60,6 @@ const message=document.querySelector('#message');
 
 function storeData(){
 let formData={
-    'firstname':firstName.value,
-    'lastname':lastName.value,
-    'email':emailAddress.value,
-    'message':message.value
 }
 localStorage.setItem('form-data',JSON.stringify(formData)); 
 }
